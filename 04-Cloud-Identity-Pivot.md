@@ -12,3 +12,5 @@ Rather than halting the lab or risking host system instability by forcing a type
 While attempting to activate the enterprise licensing in the Microsoft 365 Admin Center, I encountered a "Not Authorized" access error. I diagnosed this as an application-layer identity mismatch: my web browser was automatically passing my personal email token instead of the required enterprise token. 
 
 To bypass this routing block, I located my native cloud User Principal Name (`admin@spsweetapplegmail.onmicrosoft.com`) in the Entra ID dashboard. I then utilized an InPrivate browser session to isolate the token, successfully authenticating as the native Global Administrator and successfully securing the licenses.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e120a02a-fb30-404f-b7b8-7e3f0dba65f7" />
+
