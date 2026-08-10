@@ -43,7 +43,7 @@ Catalog folder: N
 
 Verified successful completion upon reaching 100% progress and generating the npp.8.9.7.Installer.x64.intunewin payload in the output directory.
 
-Phase 4: Cloud Ingestion and Tenant Configuration
+###**Phase 4: Cloud Ingestion and Tenant Configuration**
 Navigated to the Microsoft Intune admin center (intune.microsoft.com).
 
 Selected Apps > All apps > + Add, choosing Windows app (Win32) as the app type.
@@ -52,7 +52,7 @@ Uploaded the encrypted .intunewin package via the admin browser console.
 
 Configured enterprise app metadata (Name: Notepad++ x64, Publisher: Notepad++).
 
-Phase 5: Silent Switch & Program Parameters
+###**Phase 5: Silent Switch & Program Parameters**
 To ensure zero user interference during deployment, parameters were defined as follows:
 
 Install command: npp.8.9.7.Installer.x64.exe /S (Utilizing /S for absolute background silence).
@@ -74,29 +74,40 @@ File or folder: notepad++.exe
 
 Detection method: File or folder exists.
 
-4. Roadblocks Encountered & Troubleshooting Methodologies
+ **Roadblocks Encountered & Troubleshooting Methodologies**
+ 
 Every real-world engineering project encounters friction. Documenting how these roadblocks were systematically conquered highlights true technical adaptability:
 
-Roadblock 1: The GitHub Internal Search Trap
-The Symptom: Searching for the Microsoft-Win32-Content-Prep-Tool directly inside GitHub’s internal repository search bar while already browsing the site resulted in zero matching results.
+###**Roadblock 1: The GitHub Internal Search Trap**
+**The Symptom**: Searching for the Microsoft-Win32-Content-Prep-Tool directly inside GitHub’s internal repository search bar while already browsing the site resulted in zero matching results.
 
-The Root Cause: Including the literal string "GitHub" inside the platform's internal search query caused the algorithm to search for repositories containing the word "GitHub" in their title.
+**The Root Cause**: Including the literal string "GitHub" inside the platform's internal search query caused the algorithm to search for repositories containing the word "GitHub" in their title.
 
-The Resolution: Simplified the query to target strictly the repository title (Microsoft-Win32-Content-Prep-Tool), directly isolated the official Microsoft repository, and downloaded the raw IntuneWinAppUtil.exe executable.
+**The Resolution**: Simplified the query to target strictly the repository title (Microsoft-Win32-Content-Prep-Tool), directly isolated the official Microsoft repository, and downloaded the raw IntuneWinAppUtil.exe executable.
 
-Roadblock 2: Output Directory & CLI Syntax Synchronization
-The Symptom: Initial attempts to locate the generated .intunewin file inside the target folder failed because the directory structure or interactive prompt parameters were mistyped.
 
-The Root Cause: Minor path deviations between the user interface expectations and the strict command-line syntax caused the packaging tool to abort before writing to disk.
+###**Roadblock 2: Output Directory & CLI Syntax Synchronization**
+**The Symptom**: Initial attempts to locate the generated .intunewin file inside the target folder failed because the directory structure or interactive prompt parameters were mistyped.
 
-The Resolution: Implemented a standardized staging nomenclature (C:\IntunePackaging with isolated Source and Output trees), verified path integrity via File Explorer properties, and executed precise CLI syntax strings to ensure error-free compilation.
+**The Root Cause**: Minor path deviations between the user interface expectations and the strict command-line syntax caused the packaging tool to abort before writing to disk.
 
-Roadblock 3: Preventing False-Positive Failures via Detection Logic
-The Symptom: Theoretical risk of Intune reporting a deployment failure despite the software existing on the endpoint.
+**The Resolution**: Implemented a standardized staging nomenclature (C:\IntunePackaging with isolated Source and Output trees), verified path integrity via File Explorer properties, and executed precise CLI syntax strings to ensure error-free compilation.
 
-The Root Cause: A mismatch between where the installer writes binaries (e.g., 64-bit Program Files vs. 32-bit Program Files x86) and where Intune checks for existence.
+###**Roadblock 3: Preventing False-Positive Failures via Detection Logic**
+**The Symptom**: Theoretical risk of Intune reporting a deployment failure despite the software existing on the endpoint.
 
-The Resolution: Mapped the detection rule explicitly to the absolute 64-bit application path (C:\Program Files\Notepad++\notepad++.exe), guaranteeing that verification checks match execution realities.
+**The Root Cause**: A mismatch between where the installer writes binaries (e.g., 64-bit Program Files vs. 32-bit Program Files x86) and where Intune checks for existence.
 
-5. Conclusion
+**The Resolution**: Mapped the detection rule explicitly to the absolute 64-bit application path (C:\Program Files\Notepad++\notepad++.exe), guaranteeing that verification checks match execution realities.
+
+###**Conclusion**
 Mastering Win32 packaging and the Microsoft Intune Management Extension (IME) shifts an IT technician from reactive break-fix support to proactive infrastructure automation. By conquering command-line syntax boundaries, understanding staging directory hygiene, and engineering precise detection rules, corporate endpoints can be scaled, managed, and secured with absolute precision.
+<img width="1920" height="1080" alt="Screenshot 2026-08-10 110441" src="https://github.com/user attachments/assets/4a62c785-739e-4741-bd27-8dc9c6c7d6d1" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-10 110604" src="https://github.com/user-attachments/assets/cce3ea9b-8b34-487b-b0ae-c931457d0ca9" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-10 110801" src="https://github.com/user-attachments/assets/9e642cea-8ba7-4f65-9861-21b562741dea" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-10 111205" src="https://github.com/user-attachments/assets/d47fd63f-e3c2-4c1a-bd01-951f5fae709c" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-10 111225" src="https://github.com/user-attachments/assets/bd65fd68-763f-4877-9fb6-0adaece553b2" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-10 111544" src="https://github.com/user-attachments/assets/2872d758-c323-4d89-8609-24e31caa67de" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-10 111650" src="https://github.com/user-attachments/assets/fee45ca6-4064-4e4c-a277-f15bca449172" />
+
+
