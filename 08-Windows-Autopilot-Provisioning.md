@@ -65,3 +65,12 @@ Real-world endpoint management involves diagnosing provisioning anomalies. Docum
 
 ## 5. Conclusion
 Mastering Windows Autopilot shifts organizational deployment from reactive, desk-side imaging to scalable, automated cloud provisioning. By understanding hardware hash harvesting, deployment profiles, and OOBE troubleshooting frameworks, enterprise IT environments can securely onboard endpoints with absolute reliability.
+<img width="592" height="61" alt="Screenshot 2026-08-11 150059" src="https://github.com/user-attachments/assets/a13c5f8e-2535-491b-be6a-8f21279c8599" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-11 150324" src="https://github.com/user-attachments/assets/6a8cc4b8-332d-4f9d-b1c3-08fd5f9d9ab8" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-11 150425" src="https://github.com/user-attachments/assets/548cb41f-f71f-44b8-911a-35dcb64055a9" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-11 150434" src="https://github.com/user-attachments/assets/3091e9ea-23cc-4401-b814-0f83df92f622" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-11 150555" src="https://github.com/user-attachments/assets/80fb3205-a1a6-4eef-89c8-b21819b65c50" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-11 150638" src="https://github.com/user-attachments/assets/50002f56-7153-4217-bd6d-99c166953310" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-11 152034" src="https://github.com/user-attachments/assets/8cfa0732-00c1-4309-8d98-150e1d20071b" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-11 152402" src="https://github.com/user-attachments/assets/79cf39d0-ff65-42f7-b3da-ee314890b748" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-11 152402" src="https://github.com/user-attachments/assets/91972cc3-46cb-45ee-bf6e-f93159302f08" />
